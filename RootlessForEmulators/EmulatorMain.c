@@ -30,7 +30,7 @@ int	EmulatorMain( int argc, const char** argv )
 	
 	uint32_t*	backBuffer = malloc(screenWidth * screenHeight * 4);
 	for( int x = 0; x < (screenWidth * screenHeight); x++ )
-		backBuffer[x] = 0xFF0000FF;	// Red with 100% alpha.
+		backBuffer[x] = 0x880000FF;	// Red with 50% alpha.
 	BackBufferChanged( backBuffer, screenWidth * 4, screenWidth, screenHeight );	// And tell the rootless code to load it. You do that every time something changes.
 	
 	// Everything that should show up as a window should be registered using this call:

@@ -216,6 +216,7 @@
 {
 	NSWindow*	theWindow = [[NSWindow alloc] initWithContentRect: waf.frame styleMask: NSBorderlessWindowMask backing: NSBackingStoreBuffered defer: NO];
 	theWindow.releasedWhenClosed = NO;
+	theWindow.opaque = NO;
 	
 	[theWindow setContentView: [[RootlessWindowContentView alloc] initWithFrame: NSMakeRect(0, 0, 100, 100)]];
 	
